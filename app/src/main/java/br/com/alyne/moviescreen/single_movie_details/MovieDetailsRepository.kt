@@ -1,9 +1,10 @@
-package br.com.alyne.moviescreen.movie_details
+package br.com.alyne.moviescreen.single_movie_details
 
 import androidx.lifecycle.LiveData
 import br.com.alyne.moviescreen.data.api.TheMovieDBInterface
 import br.com.alyne.moviescreen.data.rep.MovieDetailsNetworkDataSource
 import br.com.alyne.moviescreen.data.rep.NetworkState
+import br.com.alyne.moviescreen.data.value_object.MovieDetails
 import io.reactivex.disposables.CompositeDisposable
 
 class MovieDetailsRepository(private  val apiService : TheMovieDBInterface) {

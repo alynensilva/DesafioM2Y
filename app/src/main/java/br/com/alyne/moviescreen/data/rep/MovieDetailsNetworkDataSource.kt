@@ -4,13 +4,12 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import br.com.alyne.moviescreen.data.api.TheMovieDBInterface
-import br.com.alyne.moviescreen.movie_details.MovieDetails
+import br.com.alyne.moviescreen.data.value_object.MovieDetails
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.internal.disposables.ArrayCompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import java.lang.Exception
 
-class MovieDetailsNetworkDataSource (private val apiService : TheMovieDBInterface, private val compositeDisposable: ArrayCompositeDisposable : CompositeDisposable){
+class MovieDetailsNetworkDataSource (private val apiService : TheMovieDBInterface, private val compositeDisposable: CompositeDisposable){
     private val _networkState = MutableLiveData<NetworkState>()
     val networkState: LiveData<NetworkState>
         get() = _networkState
