@@ -1,7 +1,8 @@
-package br.com.alyne.moviescreen
+package br.com.alyne.moviescreen.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import br.com.alyne.moviescreen.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

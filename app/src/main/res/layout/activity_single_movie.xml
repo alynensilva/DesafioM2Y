@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".single_movie_details.SingleMovie">
+    tools:context=".ui.single_movie_details.SingleMovie">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <ProgressBar
-            android:id="@+id/progress_bar"
+            android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -20,7 +20,7 @@
         </ProgressBar>
 
         <TextView
-            android:id="@+id/text_error"
+            android:id="@+id/textError"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -40,7 +40,7 @@
                 android:orientation="vertical">
                 
                 <ImageView
-                    android:id="@+id/movie_poster"
+                    android:id="@+id/moviePoster"
                     android:layout_width="match_parent"
                     android:layout_height="500dp"
                     android:layout_gravity="center"
@@ -61,20 +61,20 @@
 "                   android:textSize="18sp"/>
 
                 <TextView
-                    android:id="@+id/movie_tagline"
+                    android:id="@+id/movieTagline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/"
-                    android:textStyle="bold
-    "               android:textSize="14sp"/>
+                    android:textStyle="bold"
+                    android:textSize="14sp"/>
 
                 <TextView
                     android:id="@+id/movie_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/"
-                    android:textStyle="bold
-    "               android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
                     android:textSize="14sp"/>
 
                 <LinearLayout
@@ -91,7 +91,7 @@
                         android:layout_marginTop="2dp"
                         android:textSize="12sp"/>
                     <TextView
-                        android:id="@+id/release_date"
+                        android:id="@+id/releaseDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/"
@@ -115,7 +115,7 @@
                         android:textSize="12sp"/>
 
                     <TextView
-                        android:id="@+id/movie_rating"
+                        android:id="@+id/movieRating"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/"
@@ -138,7 +138,7 @@
                         android:layout_marginTop="2dp"
                         android:textSize="12sp"/>
                     <TextView
-                        android:id="@+id/movie_runtime"
+                        android:id="@+id/movieRuntime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/"
