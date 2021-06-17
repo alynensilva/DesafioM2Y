@@ -7,7 +7,6 @@ import br.com.alyne.moviescreen.data.api.TheMovieDBInterface
 import br.com.alyne.moviescreen.data.value_object.MovieDetails
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import java.lang.Exception
 
 class MovieDetailsNetworkDataSource (private val apiService : TheMovieDBInterface, private val compositeDisposable: CompositeDisposable){
     private val _networkState = MutableLiveData<NetworkState>()
@@ -23,25 +22,27 @@ class MovieDetailsNetworkDataSource (private val apiService : TheMovieDBInterfac
 
         try {
             compositeDisposable.add(
-                    apiService.getMovieDetails(movieId)
-                            .subscribeOn(Schedulers.io())
-                            .subscribe(
-                                    {
-                                        _downloadedMovieDetailsResponse.postValue(it)
-                                        _networkState.postValue(NetworkState.LOADED)
-                                    },
-                                    {
-                                        _networkState.postValue(NetworkState.ERROR)
-                                        Log.e("MovieDetailsDataSource", it.message)
-
-                                    }
-                            )
+                apiService.getMovieDetails(movieId)
+                    .subscribeOn(Schedulers.io())
+                    .subscribe(
+                        {
+                            _downloadedMovieDetailsResponse.postValue(it)
+                            _networkState.postValue(NetworkState.LOADED)
+                        },
+                        {
+                            _networkState.postValue(NetworkState.ERROR)
+                            Log.e("MovieDetailsDataSource", it.message)
+                        }
                     )
-            }
+            )
+
+        }
+
         catch (e: Exception){
             Log.e("MovieDetailsDataSource", e.message)
-            }
         }
+
+    }
 
 }
 

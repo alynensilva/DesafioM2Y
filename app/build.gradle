@@ -51,7 +51,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
 
     //ReciclerView
-    implementation 'androidx.recyclerview:recyclerview:1.0.0-alpha05'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha05'
     implementation 'androidx.cardview:cardview:1.0.0'
 
     //Retrofit - for making network calls
