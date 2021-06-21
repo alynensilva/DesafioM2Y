@@ -37,7 +37,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout"
+                android:id="@+id/constraintLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -72,7 +72,7 @@
                     android:id="@+id/movie_counts"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="5dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:text="@string/sample_text"
@@ -85,7 +85,7 @@
                     android:id="@+id/movie_popularity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="5dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:text="@string/sample_text"
@@ -125,13 +125,26 @@
                     app:srcCompat="@drawable/heart_icon" />
 
                 <View
-                    android:id="@+id/gradient_view"
+                    android:id="@+id/gradientView"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:background="@drawable/gradient"
                     app:layout_constraintBottom_toBottomOf="@+id/iv_movie_poster"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/heartCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="52dp"
+                    android:button="@drawable/custom_button"
+                    android:checked="false"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:theme="@style/chekboxStyle"
+                    app:layout_constraintBottom_toTopOf="@+id/movie_list"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
