@@ -3,21 +3,14 @@ package br.com.alyne.moviescreen.data.value_object
 
 import com.google.gson.annotations.SerializedName
 
-data class MovieDetails(
-    val budget: Int,
+data class Movie(
     val id: Int,
-    val overview: String,
-    val popularity: Double,
     @SerializedName("poster_path")
     val posterPath: String,
     @SerializedName("release_date")
     val releaseDate: String,
-    val revenue: Long,
-    val runtime: Int,
-    val status: String,
-    val tagline: String,
     val title: String,
-    val video: Boolean,
-    val rating: Double,
-    val voteCount: Int
+    @SerializedName("genre_ids")
+    val genreIds: List<Int>,
+
 )

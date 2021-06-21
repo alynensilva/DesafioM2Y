@@ -1,4 +1,4 @@
-package br.com.alyne.moviescreen.ui.single_movie_details
+package br.com.alyne.moviescreen.ui.movie_details
 
 import androidx.lifecycle.LiveData
 import br.com.alyne.moviescreen.data.api.TheMovieDBInterface
