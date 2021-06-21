@@ -20,8 +20,8 @@
 
         <ImageView
             android:id="@+id/cv_moviePoster"
-            android:layout_width="130dp"
-            android:layout_height="175dp"
+            android:layout_width="95dp"
+            android:layout_height="126dp"
             android:layout_marginStart="16dp"
             android:scaleType="centerCrop"
             android:src="@drawable/poster_placeholder"
@@ -32,37 +32,40 @@
 
         <TextView
             android:id="@+id/cv_movieTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="5dp"
             android:ellipsize="end"
-            android:maxLines="1"
+            android:maxLines="2"
             android:text="@string/sample_text"
             android:textColor="@color/white"
-            android:textSize="12sp"
-            android:translationX="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cv_moviePoster" />
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/cv_movieReleaseDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/cv_moviePoster" />
 
         <TextView
             android:id="@+id/cv_movieReleaseDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="48dp"
             android:maxLength="4"
             android:text="@string/sample_text"
             android:textColor="@color/white"
-            android:textSize="10sp"
-            android:translationX="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cv_movieTitle" />
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cv_moviePoster" />
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/checkbox_on_background" />

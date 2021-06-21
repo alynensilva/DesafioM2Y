@@ -94,7 +94,7 @@ class MovieDetailsActivity : AppCompatActivity() {
 
     fun bindUI(it: MovieDetails){
         binding.movieTitle.text = it.title
-        binding.moviePopularity.text = it.popularity.toString()
+        binding.moviePopularity.text = it.popularity.toString() + " views"
         binding.movieCounts.text = it.voteCount.toString() + " likes"
 
         val moviePosterUL = POSTER_BASE_URL + it.posterPath
