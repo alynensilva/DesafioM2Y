@@ -62,6 +62,7 @@ class MovieDetailsActivity : AppCompatActivity() {
                     else
                         View.GONE
         })
+
         //Setting observers for the list of similar movies
        val movieAdapter = SimilarMoviePagedListAdapter(this)
        val linearLayoutManager = LinearLayoutManager(this)

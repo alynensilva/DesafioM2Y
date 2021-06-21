@@ -9,14 +9,14 @@ import retrofit2.http.Query
 
 interface TheMovieDBInterface {
     /*
-    URL for the movie information:
+    URL for movie information:
     https://api.themoviedb.org/3/movie/372058?api_key=165ad824f6875e3df1e29366b3faf0f2
 
     URL for similar movies:
     https://api.themoviedb.org/3/movie/372058/similar?api_key=165ad824f6875e3df1e29366b3faf0f2
     */
 
-    //This function gets the movie details from the API
+    //This function gets movie details from the API
     @GET("movie/{movie_id}")
     fun getMovieDetails(@Path ("movie_id") id: Int): Single<MovieDetails>
 
