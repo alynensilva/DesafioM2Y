@@ -25,32 +25,24 @@ class MovieDetailsActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMovieDetailsBinding
     private lateinit var simMovieViewModel : SimilarMoviesViewModel
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //This will be used to access the movie information such as name, likes, and popularity
-        val movieId: Int = intent.getIntExtra("id",372058)
+        val movieId = 372058
 
-        //Binding the layout
         binding = ActivityMovieDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //Linking to the API Client
         val apiService : TheMovieDBInterface = TheMovieDBClient.getClient()
         movieRepository = MovieDetailsRepository(apiService)
         similarMoviesRepository = MoviePagedListRepository(apiService)
 
-
-        //Setting observers for movie information
         viewModel = getViewModel(movieId)
         viewModel.movieDetails.observe(this, Observer {
             bindUI(it)
         })
 
         viewModel.networkState.observe(this, Observer {
-
-
             binding.progressBar.visibility =
                     if (it == NetworkState.LOADING)
                         View.VISIBLE
@@ -63,7 +55,6 @@ class MovieDetailsActivity : AppCompatActivity() {
                         View.GONE
         })
 
-        //Setting observers for the list of similar movies
        val movieAdapter = SimilarMoviePagedListAdapter(this)
        val linearLayoutManager = LinearLayoutManager(this)
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_margin">16dp</dimen>
+    <dimen name="margin_0">0dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_52">52dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+
+    <dimen name="size_95">95dp</dimen>
+    <dimen name="size_100">100dp</dimen>
+    <dimen name="size_126">126dp</dimen>
+    <dimen name="size_500">500dp</dimen>
+
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+</resources>
