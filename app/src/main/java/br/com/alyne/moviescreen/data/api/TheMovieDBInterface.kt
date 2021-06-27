@@ -16,12 +16,9 @@ interface TheMovieDBInterface {
     https://api.themoviedb.org/3/movie/372058/similar?api_key=165ad824f6875e3df1e29366b3faf0f2
     */
 
-    //This function gets movie details from the API
     @GET("movie/{movie_id}")
     fun getMovieDetails(@Path ("movie_id") id: Int): Single<MovieDetails>
 
-    //This function gets movies similar to the specific movie used in this project
     @GET("movie/372058/similar")
     fun getSimilarMovies(@Query("page") page: Int): Single<MovieSimilar>
-
 }

@@ -1,6 +1,5 @@
 package br.com.alyne.moviescreen.data.value_object
 
-
 import com.google.gson.annotations.SerializedName
 
 data class Movie(

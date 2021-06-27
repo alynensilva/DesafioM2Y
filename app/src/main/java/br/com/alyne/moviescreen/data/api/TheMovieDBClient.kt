@@ -38,6 +38,5 @@ object TheMovieDBClient {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(TheMovieDBInterface::class.java)
-
     }
 }
